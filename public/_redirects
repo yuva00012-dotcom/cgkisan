@@ -1,0 +1,10 @@
+/kisancode        /index.html   200
+/kisancode/*      /index.html   200
+/kisan-code       /index.html   200
+/token-status     /index.html   200
+/status           /index.html   200
+/calculator       /index.html   200
+/forms            /index.html   200
+/schemes          /index.html   200
+/instructions     /index.html   200
+/public/*         /:splat       301

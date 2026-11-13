@@ -65,8 +65,36 @@ let tokenRegistry = JSON.parse(localStorage.getItem('kisan_tokens')) || {
 
 let currentSelectedFarmer = null;
 
+const ROUTE_MAP = {
+    'home': { path: '/', title: 'किसान - तुंहर टोकन | डिजिटल किसान सेवा' },
+    'find-code': { path: '/kisancode', title: 'किसान पंजीयन कोड खोजें | डिजिटल किसान सेवा' },
+    'forms': { path: '/forms', title: 'शपथ पत्र व शिकायत प्रारूप | डिजिटल किसान सेवा' },
+    'schemes': { path: '/schemes', title: 'सौर सुजला योजना व DBT स्थिति | डिजिटल किसान सेवा' },
+    'status': { path: '/token-status', title: 'टोकन स्थिति व पावती पर्ची | डिजिटल किसान सेवा' },
+    'calculator': { path: '/calculator', title: 'धान विक्रय व कोटा कैलकुलेटर | डिजिटल किसान सेवा' },
+    'instructions': { path: '/instructions', title: 'धान उपार्जन दिशानिर्देश व नियम | डिजिटल किसान सेवा' }
+};
+
+function getTabFromPath(pathname) {
+    if (!pathname) return 'home';
+    const clean = pathname.toLowerCase().replace(/\/public/g, '').replace(/\/$/, '') || '/';
+    if (clean.includes('kisancode') || clean.includes('kisan-code')) return 'find-code';
+    if (clean.includes('token-status') || clean.includes('status')) return 'status';
+    if (clean.includes('calculator') || clean.includes('quota')) return 'calculator';
+    if (clean.includes('form') || clean.includes('shapath')) return 'forms';
+    if (clean.includes('scheme') || clean.includes('dbt') || clean.includes('solar')) return 'schemes';
+    if (clean.includes('instruction') || clean.includes('niyam')) return 'instructions';
+    return 'home';
+}
+
 // Initialize on DOM load
 document.addEventListener('DOMContentLoaded', () => {
+    // 1. Auto-redirect if accessed from kisancode.pages.dev to canonical master URL
+    if (window.location.hostname === 'kisancode.pages.dev') {
+        window.location.replace('https://cgkisan.pages.dev/kisancode');
+        return;
+    }
+
     initNavigation();
     setupEventListeners();
     calculatePaddy(); // run initial calculation for calculator tab
@@ -74,16 +102,29 @@ document.addEventListener('DOMContentLoaded', () => {
     initWeatherGuard(); // Initialize 🌦️ Paddy Weather Guard
     initFormsAndSchemes(); // Initialize 📑 Forms, Grievance, Solar & Kisan ID Card
 
-    // Auto-open Kisan Code tab if domain is kisancode.pages.dev or ?tab=find-code
-    const host = window.location.hostname.toLowerCase();
+    // 2. Initial Route Resolution (Path, Query Param, or Hash)
     const urlParams = new URLSearchParams(window.location.search);
-    if (host.includes('kisancode') || urlParams.get('tab') === 'find-code' || window.location.hash === '#find-code') {
-        switchTab('find-code');
-        setTimeout(() => {
-            const searchInput = document.getElementById('farmer-search-input');
-            if (searchInput) searchInput.focus();
-        }, 150);
+    const tabParam = urlParams.get('tab');
+    const hashParam = window.location.hash.replace('#', '');
+    const initialTab = (tabParam && ROUTE_MAP[tabParam] ? tabParam : null) || 
+                       (hashParam && ROUTE_MAP[hashParam] ? hashParam : null) || 
+                       getTabFromPath(window.location.pathname);
+
+    if (initialTab && initialTab !== 'home') {
+        switchTab(initialTab, false);
+        if (initialTab === 'find-code') {
+            setTimeout(() => {
+                const searchInput = document.getElementById('farmer-search-input');
+                if (searchInput) searchInput.focus();
+            }, 150);
+        }
     }
+
+    // 3. Listen to browser Back/Forward navigation
+    window.addEventListener('popstate', (e) => {
+        const targetTab = (e.state && e.state.tabId) || getTabFromPath(window.location.pathname);
+        switchTab(targetTab, false);
+    });
 });
 
 // 2. Navigation Tabs
@@ -92,12 +133,12 @@ function initNavigation() {
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
             const tabId = tab.getAttribute('data-tab');
-            switchTab(tabId);
+            switchTab(tabId, true);
         });
     });
 }
 
-function switchTab(tabId) {
+function switchTab(tabId, updateUrl = true) {
     document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
     document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
 
@@ -108,6 +149,17 @@ function switchTab(tabId) {
         activeTab.classList.add('active');
         activePane.classList.add('active');
         window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        const route = ROUTE_MAP[tabId];
+        if (route) {
+            document.title = route.title;
+            if (updateUrl && window.history && window.history.pushState) {
+                const currentPath = window.location.pathname.toLowerCase().replace(/\/public/g, '').replace(/\/$/, '') || '/';
+                if (currentPath !== route.path) {
+                    window.history.pushState({ tabId }, route.title, route.path);
+                }
+            }
+        }
     }
 }
 

@@ -10,6 +10,7 @@ bastar_data.js
 bastar_farmers.json
 data/
 node_modules/
+.wrangler/
 .env
 .DS_Store
 Thumbs.db
