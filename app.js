@@ -73,6 +73,17 @@ document.addEventListener('DOMContentLoaded', () => {
     initFarmerCodeSearch(); // Initialize Bastar Farmer Search Engine
     initWeatherGuard(); // Initialize 🌦️ Paddy Weather Guard
     initFormsAndSchemes(); // Initialize 📑 Forms, Grievance, Solar & Kisan ID Card
+
+    // Auto-open Kisan Code tab if domain is kisancode.pages.dev or ?tab=find-code
+    const host = window.location.hostname.toLowerCase();
+    const urlParams = new URLSearchParams(window.location.search);
+    if (host.includes('kisancode') || urlParams.get('tab') === 'find-code' || window.location.hash === '#find-code') {
+        switchTab('find-code');
+        setTimeout(() => {
+            const searchInput = document.getElementById('farmer-search-input');
+            if (searchInput) searchInput.focus();
+        }, 150);
+    }
 });
 
 // 2. Navigation Tabs
