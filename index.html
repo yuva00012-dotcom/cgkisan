@@ -1,0 +1,1258 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>किसान-तुंहर टोकन | छत्तीसगढ़ शासन खाद्य विभाग</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Top Govt Banner -->
+    <div class="top-strip">
+        <div class="container strip-content">
+            <div class="strip-left">
+                <span class="flag-icon">🇮🇳</span> 
+                <span>छत्तीसगढ़ शासन | खाद्य, नागरिक आपूर्ति एवं उपभोक्ता संरक्षण विभाग</span>
+            </div>
+            <div class="strip-right">
+                <span class="badge-year"><i class="fa-solid fa-wheat-awn"></i> खरीफ विपणन वर्ष: 2026-27</span>
+                <span class="helpline"><i class="fa-solid fa-phone-volume"></i> टोल फ्री: 1800-233-3663</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="brand-area">
+                <img src="assets/cg_logo_n.png" alt="छत्तीसगढ़ शासन" class="brand-logo cg-logo">
+                <div class="brand-text">
+                    <h1 class="portal-title">किसान - तुंहर टोकन</h1>
+                    <p class="portal-subtitle">टोकन तुंहर हाथ • धान खरीदी ऑनलाइन टोकन व्यवस्था</p>
+                </div>
+            </div>
+            <div class="header-right">
+                <img src="assets/ic_nic_logo.png" alt="NIC Logo" class="brand-logo nic-logo">
+                <div class="app-version-badge">
+                    <span class="dot-online"></span> वेब संस्करण 2.3
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <nav class="portal-nav">
+        <div class="container nav-container">
+            <button class="nav-tab active" data-tab="home">
+                <i class="fa-solid fa-house"></i>
+                <span>मुख्य पृष्ठ (Home)</span>
+            </button>
+            <button class="nav-tab nav-tab-highlight" data-tab="find-code">
+                <i class="fa-solid fa-id-card"></i>
+                <span>🔍 किसान कोड खोजें</span>
+            </button>
+            <button class="nav-tab" data-tab="forms">
+                <i class="fa-solid fa-file-signature"></i>
+                <span>📜 शपथ पत्र व शिकायत</span>
+            </button>
+            <button class="nav-tab" data-tab="schemes">
+                <i class="fa-solid fa-solar-panel"></i>
+                <span>☀️ सौर सुजला व DBT</span>
+            </button>
+            <button class="nav-tab" data-tab="status">
+                <i class="fa-solid fa-receipt"></i>
+                <span>टोकन स्थिति व पर्ची</span>
+            </button>
+            <button class="nav-tab" data-tab="calculator">
+                <i class="fa-solid fa-calculator"></i>
+                <span>धान व कोटा कैलकुलेटर</span>
+            </button>
+            <button class="nav-tab" data-tab="instructions">
+                <i class="fa-solid fa-circle-info"></i>
+                <span>दिशानिर्देश व नियम</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="container main-content">
+
+        <!-- 1. HOME TAB -->
+        <section id="tab-home" class="tab-pane active">
+            <!-- Hero Announcement Card -->
+            <div class="hero-card">
+                <div class="hero-info">
+                    <span class="hero-tag"><i class="fa-solid fa-bullhorn"></i> महत्वपूर्ण सूचना</span>
+                    <h2>छत्तीसगढ़ समर्थन मूल्य पर धान खरीदी 2026-27</h2>
+                    <p>समिति में भीड़ और लंबी कतारों से बचें! अब घर बैठे अपने मोबाइल व कंप्यूटर से धान उपार्जन केंद्र (समिति) हेतु पसंदीदा दिनांक का टोकन बुक करें।</p>
+                    <div class="hero-highlights">
+                        <div class="hl-item"><i class="fa-solid fa-check-circle"></i> 21 क्विंटल प्रति एकड़ खरीदी</div>
+                        <div class="hl-item"><i class="fa-solid fa-check-circle"></i> ₹3100 प्रति क्विंटल मान</div>
+                        <div class="hl-item"><i class="fa-solid fa-check-circle"></i> सीधा बैंक खाते में भुगतान</div>
+                    </div>
+                    <div class="hero-actions">
+                        <button class="btn btn-warning btn-lg" onclick="switchTab('find-code')">
+                            <i class="fa-solid fa-id-card"></i> 🔍 किसान कोड खोजें
+                        </button>
+                        <button class="btn btn-primary btn-lg" onclick="switchTab('status')">
+                            <i class="fa-solid fa-receipt"></i> टोकन स्थिति व पर्ची
+                        </button>
+                        <button class="btn btn-outline btn-lg" onclick="switchTab('calculator')">
+                            <i class="fa-solid fa-calculator"></i> धान व कोटा कैलकुलेटर
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-graphic">
+                    <img src="assets/ic_farmer_splash.png" alt="किसान भाई" class="hero-img">
+                </div>
+            </div>
+
+            <!-- 🌦️ PADDY WEATHER GUARD (धान सुरक्षा व स्थानीय मौसम अलर्ट) -->
+            <div class="weather-guard-card" id="weather-guard-widget">
+                <div class="wg-header">
+                    <div class="wg-title-group">
+                        <div class="wg-icon-badge">
+                            <i class="fa-solid fa-cloud-sun-rain"></i>
+                        </div>
+                        <div>
+                            <div class="wg-badge-row">
+                                <span class="wg-live-pill"><span class="live-dot"></span> लाइव मौसम एडवाइजरी</span>
+                                <span class="wg-source-pill" id="wg-location-source"><i class="fa-solid fa-location-dot"></i> जिला: बस्तर</span>
+                            </div>
+                            <h3 class="wg-title">🌦️ धान सुरक्षा व स्थानीय मौसम अलर्ट (Paddy Weather Guard)</h3>
+                            <p class="wg-subtitle">समिति जाने से पहले अपने क्षेत्र का मौसम, बारिश की संभावना व मानक धान नमी (FAQ 17%) जांचें</p>
+                        </div>
+                    </div>
+                    <div class="wg-actions">
+                        <button type="button" class="btn-wg-gps" id="wg-btn-gps" title="जीपीएस द्वारा सटीक गांव/खेत की लाइव लोकेशन देखें">
+                            <i class="fa-solid fa-crosshairs"></i> <span>मेरी लाइव लोकेशन (GPS)</span>
+                        </button>
+                        <div class="wg-district-select-wrap">
+                            <i class="fa-solid fa-map-pin select-pin-icon"></i>
+                            <select id="wg-district-select" class="wg-select">
+                                <option value="balod">बालोद (Balod)</option>
+                                <option value="balodabazar">बलौदाबाजार (Baloda Bazar)</option>
+                                <option value="balrampur">बलरामपुर (Balrampur)</option>
+                                <option value="bastar" selected>बस्तर (Bastar)</option>
+                                <option value="bemetara">बेमेतरा (Bemetara)</option>
+                                <option value="bilaspur">बिलासपुर (Bilaspur)</option>
+                                <option value="dhamtari">धमतरी (Dhamtari)</option>
+                                <option value="durg">दुर्ग (Durg)</option>
+                                <option value="gariaband">गरियाबंद (Gariaband)</option>
+                                <option value="gpm">गौरेला-पेन्ड्रा-मरवाही (GPM)</option>
+                                <option value="janjgir">जांजगीर-चांपा (Janjgir-Champa)</option>
+                                <option value="jashpur">जशपुर (Jashpur)</option>
+                                <option value="kanker">कांकेर (Kanker)</option>
+                                <option value="kawardha">कबीरधाम - कवर्धा (Kabirdham)</option>
+                                <option value="kondagaon">कोंडागांव (Kondagaon)</option>
+                                <option value="korba">कोरबा (Korba)</option>
+                                <option value="koriya">कोरिया (Koriya)</option>
+                                <option value="mahasamund">महासमुंद (Mahasamund)</option>
+                                <option value="mungeli">मुंगेली (Mungeli)</option>
+                                <option value="raigarh">रायगढ़ (Raigarh)</option>
+                                <option value="raipur">रायपुर (Raipur)</option>
+                                <option value="rajnandgaon">राजनांदगांव (Rajnandgaon)</option>
+                                <option value="sarguja">सरगुजा (Sarguja)</option>
+                                <option value="sukma">सुकमा (Sukma)</option>
+                                <option value="surajpur">सूरजपुर (Surajpur)</option>
+                                <option value="bijapur">बीजापुर (Bijapur)</option>
+                                <option value="narayanpur">नारायणपुर (Narayanpur)</option>
+                                <option value="dantewada">दंतेवाड़ा (Dantewada)</option>
+                            </select>
+                        </div>
+                        <button type="button" class="btn-wg-refresh" id="wg-btn-refresh" title="मौसम अपडेट करें">
+                            <i class="fa-solid fa-rotate-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Dynamic Paddy Alert Notice Bar (Red / Yellow / Green) -->
+                <div class="wg-alert-banner alert-safe" id="wg-alert-banner">
+                    <div class="wg-alert-icon" id="wg-alert-icon">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <div class="wg-alert-content">
+                        <h4 id="wg-alert-title">मौसम अनुकूल (उत्तम दिन)</h4>
+                        <p id="wg-alert-desc">आज मौसम साफ और खिली धूप है। धान सुखाने, मिंजाई करने और उपार्जन केंद्र (समिति) ले जाने हेतु उत्तम दिन है।</p>
+                    </div>
+                    <div class="wg-tarpaulin-badge" id="wg-tarpaulin-badge">
+                        <i class="fa-solid fa-shield-halved"></i> <span>तिरपाल साथ रखें</span>
+                    </div>
+                </div>
+
+                <!-- Metrics Strip (4 key indicators) -->
+                <div class="wg-metrics-grid">
+                    <div class="wg-metric-box">
+                        <div class="wg-m-icon text-temp"><i class="fa-solid fa-temperature-half"></i></div>
+                        <div class="wg-m-info">
+                            <span class="wg-m-label">वर्तमान तापमान</span>
+                            <strong class="wg-m-val" id="wg-temp-val">--°C</strong>
+                            <small class="wg-m-sub" id="wg-temp-range">न्यूनतम: --°C • अधिकतम: --°C</small>
+                        </div>
+                    </div>
+                    <div class="wg-metric-box">
+                        <div class="wg-m-icon text-rain"><i class="fa-solid fa-cloud-showers-heavy"></i></div>
+                        <div class="wg-m-info">
+                            <span class="wg-m-label">आज बारिश का खतरा</span>
+                            <strong class="wg-m-val" id="wg-rain-val">--%</strong>
+                            <small class="wg-m-sub" id="wg-rain-sub">वर्षा दर: 0.0 mm</small>
+                        </div>
+                    </div>
+                    <div class="wg-metric-box">
+                        <div class="wg-m-icon text-humidity"><i class="fa-solid fa-droplet"></i></div>
+                        <div class="wg-m-info">
+                            <span class="wg-m-label">हवा में नमी (Humidity)</span>
+                            <strong class="wg-m-val" id="wg-humidity-val">--%</strong>
+                            <small class="wg-m-sub" id="wg-humidity-sub">धान मानक: अधिकतम 17% नमी</small>
+                        </div>
+                    </div>
+                    <div class="wg-metric-box">
+                        <div class="wg-m-icon text-wind"><i class="fa-solid fa-wind"></i></div>
+                        <div class="wg-m-info">
+                            <span class="wg-m-label">हवा की गति</span>
+                            <strong class="wg-m-val" id="wg-wind-val">-- km/h</strong>
+                            <small class="wg-m-sub" id="wg-condition-val">साफ आसमान</small>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 10-Day Paddy Forecast Strip -->
+                <div class="wg-forecast-section">
+                    <div class="wg-forecast-header">
+                        <div class="wg-fh-left">
+                            <span class="wg-fh-title"><i class="fa-solid fa-calendar-days"></i> आगामी 10 दिनों का विस्तृत धान सुरक्षा पूर्वानुमान (10-Day Forecast):</span>
+                            <span class="wg-forecast-badge"><i class="fa-solid fa-shield-halved"></i> 10 दिन धान सुरक्षा गाइड</span>
+                        </div>
+                        <div class="wg-fh-right">
+                            <small class="text-muted"><i class="fa-solid fa-clock-rotate-left"></i> अपडेट समय: <span id="wg-last-updated">--:--</span></small>
+                        </div>
+                    </div>
+                    <div class="wg-forecast-grid" id="wg-forecast-grid">
+                        <!-- Populated dynamically by JavaScript (10 Days) -->
+                    </div>
+                </div>
+
+                <!-- Farmer Paddy Guard Advice Footer -->
+                <div class="wg-footer-tips">
+                    <span class="tip-label"><i class="fa-solid fa-lightbulb"></i> किसान भाई ध्यान दें:</span>
+                    <span class="tip-item"><i class="fa-solid fa-check"></i> उपार्जन केंद्र जाने से पहले गाड़ी में तिरपाल (Tarpaulin) अवश्य रखें।</span>
+                    <span class="tip-item"><i class="fa-solid fa-check"></i> धान में 17% से अधिक नमी होने पर सुखाकर ही लाएं ताकि रिजेक्शन न हो।</span>
+                </div>
+            </div>
+
+            <!-- Quick Service Cards -->
+            <div class="section-title">
+                <h3><i class="fa-solid fa-cubes"></i> प्रमुख सेवाएं (Key Services)</h3>
+                <p>अपनी सुविधानुसार सेवा का चयन करें</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card" onclick="switchTab('find-code')">
+                    <div class="service-icon green-bg">
+                        <i class="fa-solid fa-id-card" style="font-size: 2rem; color: #166534;"></i>
+                    </div>
+                    <h4>किसान कोड खोजें</h4>
+                    <p>28 जिलों के 21.77 लाख किसानों में से अपना नाम, पिता का नाम या कोड खोजें।</p>
+                    <span class="link-arrow">कोड खोजें <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+
+                <div class="service-card" onclick="switchTab('forms')">
+                    <div class="service-icon blue-bg">
+                        <i class="fa-solid fa-file-signature" style="font-size: 2rem; color: #1d4ed8;"></i>
+                    </div>
+                    <h4>शपथ पत्र व शिकायत</h4>
+                    <p>अधिया, बंटाईदार, नॉमिनी शपथ पत्र व कलेक्टर शिकायत पत्र तैयार करें।</p>
+                    <span class="link-arrow">फॉर्म बनाएं <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+
+                <div class="service-card" onclick="switchTab('schemes')">
+                    <div class="service-icon orange-bg">
+                        <i class="fa-solid fa-solar-panel" style="font-size: 2rem; color: #d97706;"></i>
+                    </div>
+                    <h4>सौर सुजला व DBT चेकर</h4>
+                    <p>सोलर पंप 95% सब्सिडी गणना व रुका हुआ भुगतान पाने हेतु DBT सहायता।</p>
+                    <span class="link-arrow">सब्सिडी देखें <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+
+                <div class="service-card" onclick="switchTab('status')">
+                    <div class="service-icon green-bg">
+                        <img src="assets/ic_token.png" alt="टोकन स्थिति">
+                    </div>
+                    <h4>टोकन स्थिति एवं पर्ची</h4>
+                    <p>काटे गए टोकन की स्थिति देखें व प्रिंट योग्य पावती पर्ची निकालें।</p>
+                    <span class="link-arrow">पर्ची देखें <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+
+                <div class="service-card" onclick="switchTab('calculator')">
+                    <div class="service-icon blue-bg">
+                        <img src="assets/ic_paddy_n.png" alt="धान कैलकुलेटर">
+                    </div>
+                    <h4>धान मात्रा कैलकुलेटर</h4>
+                    <p>अपने कुल रकबे के अनुसार कुल धान व टोकन की संख्या की गणना करें।</p>
+                    <span class="link-arrow">गणना करें <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+
+                <div class="service-card" onclick="switchTab('instructions')">
+                    <div class="service-icon red-bg">
+                        <img src="assets/ic_instruction_n.png" alt="दिशानिर्देश व नियम">
+                    </div>
+                    <h4>दिशानिर्देश व नियम</h4>
+                    <p>समर्थन मूल्य, 17% नमी मानक, टोकन व्यवस्था व हेल्पलाइन नियम देखें।</p>
+                    <span class="link-arrow">नियम देखें <i class="fa-solid fa-arrow-right"></i></span>
+                </div>
+            </div>
+
+            <!-- Farmer Stats & Quick Info -->
+            <div class="info-banner-grid">
+                <div class="info-box">
+                    <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+                    <div class="info-text">
+                        <h5>टोकन बुकिंग का समय</h5>
+                        <p>प्रतिदिन सुबह 09:30 बजे से शाम 05:00 बजे तक ऑनलाइन टोकन काटा जा सकता है।</p>
+                    </div>
+                </div>
+                <div class="info-box">
+                    <div class="info-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                    <div class="info-text">
+                        <h5>अग्रिम बुकिंग सीमा</h5>
+                        <p>किसान आगामी 7 कार्यदिवसों में से किसी भी दिन का टोकन चुन सकते हैं।</p>
+                    </div>
+                </div>
+                <div class="info-box">
+                    <div class="info-icon"><i class="fa-solid fa-truck"></i></div>
+                    <div class="info-text">
+                        <h5>आवश्यक दस्तावेज</h5>
+                        <p>उपार्जन केंद्र पर टोकन पर्ची, किसान पंजीयन पर्ची व आधार कार्ड साथ लाएं।</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FIND KISAN CODE TAB (बस्तर जिला विशेष) -->
+        <section id="tab-find-code" class="tab-pane">
+            <div class="find-code-container">
+                <!-- Header Banner -->
+                <div class="section-header-box">
+                    <div class="sh-left">
+                        <div class="icon-circle"><i class="fa-solid fa-id-badge"></i></div>
+                        <div>
+                            <h2>किसान कोड एवं सूची क्रमांक खोजें</h2>
+                            <p>छत्तीसगढ़ समर्थन मूल्य धान उपार्जन • जिला एवं उपार्जन केंद्र (समिति) चुनकर किसान कोड देखें</p>
+                        </div>
+                    </div>
+                    <div class="sh-right">
+                        <span class="badge-district" id="fc-badge-district"><i class="fa-solid fa-location-dot"></i> जिला: बस्तर</span>
+                        <span class="badge-stats" id="fc-badge-stats"><i class="fa-solid fa-users"></i> 28 जिले • 2,484 उपकेंद्र • 21,77,478 किसान</span>
+                    </div>
+                </div>
+
+                <!-- Filter Card -->
+                <div class="filter-card">
+                    <div class="filter-row">
+                        <div class="filter-group">
+                            <label for="fc-district"><i class="fa-solid fa-map-location-dot"></i> जिला चुनें (Select District):</label>
+                            <select id="fc-district" class="form-control">
+                                <option value="balod">बालोद (Balod) [138 उपकेंद्र • 1,30,679 किसान]</option>
+                                <option value="balodabazar">बलौदाबाजार (Baloda Bazar) [182 उपकेंद्र • 1,68,471 किसान]</option>
+                                <option value="balrampur">बलरामपुर (Balrampur) [44 उपकेंद्र • 36,835 किसान]</option>
+                                <option value="bastar" selected>बस्तर (Bastar) [71 उपकेंद्र • 31,047 किसान]</option>
+                                <option value="bemetara">बेमेतरा (Bemetara) [123 उपकेंद्र • 1,37,005 किसान]</option>
+                                <option value="bilaspur">बिलासपुर (Bilaspur) [130 उपकेंद्र • 1,10,102 किसान]</option>
+                                <option value="dhamtari">धमतरी (Dhamtari) [96 उपकेंद्र • 1,12,227 किसान]</option>
+                                <option value="durg">दुर्ग (Durg) [94 उपकेंद्र • 95,699 किसान]</option>
+                                <option value="gariaband">गरियाबंद (Gariaband) [82 उपकेंद्र • 73,006 किसान]</option>
+                                <option value="gpm">गौरेला पेन्ड्रा मरवाही (GPM) [18 उपकेंद्र • 13,976 किसान]</option>
+                                <option value="janjgir">जांजगीर-चांपा (Janjgir-Champa) [239 उपकेंद्र • 1,90,898 किसान]</option>
+                                <option value="jashpur">जशपुर (Jashpur) [35 उपकेंद्र • 23,772 किसान]</option>
+                                <option value="kanker">कांकेर (Kanker) [137 उपकेंद्र • 77,948 किसान]</option>
+                                <option value="kawardha">कबीरधाम - कवर्धा (Kabirdham) [103 उपकेंद्र • 1,02,085 किसान]</option>
+                                <option value="kondagaon">कोंडागांव (Kondagaon) [57 उपकेंद्र • 34,753 किसान]</option>
+                                <option value="korba">कोरबा (Korba) [55 उपकेंद्र • 34,077 किसान]</option>
+                                <option value="koriya">कोरिया (Koriya) [41 उपकेंद्र • 28,304 किसान]</option>
+                                <option value="mahasamund">महासमुंद (Mahasamund) [152 उपकेंद्र • 1,39,691 किसान]</option>
+                                <option value="mungeli">मुंगेली (Mungeli) [97 उपकेंद्र • 87,872 किसान]</option>
+                                <option value="raigarh">रायगढ़ (Raigarh) [143 उपकेंद्र • 1,08,117 किसान]</option>
+                                <option value="raipur">रायपुर (Raipur) [138 उपकेंद्र • 1,22,290 किसान]</option>
+                                <option value="rajnandgaon">राजनांदगांव (Rajnandgaon) [149 उपकेंद्र • 1,96,035 किसान]</option>
+                                <option value="sarguja">सरगुजा (Sarguja) [46 उपकेंद्र • 41,467 किसान]</option>
+                                <option value="sukma">सुकमा (Sukma) [20 उपकेंद्र • 10,481 किसान]</option>
+                                <option value="surajpur">सूरजपुर (Surajpur) [50 उपकेंद्र • 47,331 किसान]</option>
+                                <option value="bijapur">बीजापुर (Bijapur) [21 उपकेंद्र • 13,061 किसान]</option>
+                                <option value="narayanpur">नारायणपुर (Narayanpur) [11 उपकेंद्र • 5,314 किसान]</option>
+                                <option value="dantewada">दंतेवाड़ा (Dantewada) [12 उपकेंद्र • 4,935 किसान]</option>
+                            </select>
+                        </div>
+                        <div class="filter-group flex-2">
+                            <label for="fc-center"><i class="fa-solid fa-warehouse"></i> उपार्जन केंद्र (समिति) चुनें:</label>
+                            <select id="fc-center" class="form-control">
+                                <option value="ALL">-- सभी उपार्जन केंद्र (समस्त जिला) --</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="search-row">
+                        <div class="search-input-wrap">
+                            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                            <input type="text" id="fc-search-input" class="form-control search-input" 
+                                   placeholder="किसान का नाम (उदा. आयतू, नन्दलाल, Arabati) अथवा पिता का नाम या कोड टाइप करें...">
+                            <button type="button" class="btn-clear-search" id="fc-btn-clear" title="साफ़ करें">&times;</button>
+                        </div>
+                        <button type="button" class="btn btn-primary" id="fc-btn-search">
+                            <i class="fa-solid fa-search"></i> खोजें
+                        </button>
+                    </div>
+
+                    <!-- Quick search pills -->
+                    <div class="quick-hints">
+                        <span><i class="fa-solid fa-lightbulb"></i> उदाहरण खोजें: </span>
+                        <button type="button" class="pill-hint" onclick="quickSearchCode('आयतू')">आयतू</button>
+                        <button type="button" class="pill-hint" onclick="quickSearchCode('नन्दलाल')">नन्दलाल</button>
+                        <button type="button" class="pill-hint" onclick="quickSearchCode('बैधनाथ')">बैधनाथ</button>
+                        <button type="button" class="pill-hint" onclick="quickSearchCode('Baghel')">Baghel</button>
+                        <button type="button" class="pill-hint" onclick="quickSearchCode('Kashyap')">Kashyap</button>
+                        <button type="button" class="pill-hint" onclick="quickSearchCode('साहू')">साहू</button>
+                    </div>
+                </div>
+
+                <!-- Live Status Bar -->
+                <div class="result-bar" id="fc-result-bar">
+                    <div class="rb-left">
+                        <span id="fc-match-count">0</span> किसान मिले
+                        <span class="rb-filter-hint" id="fc-filter-hint">(लोड हो रहा है...)</span>
+                    </div>
+                    <div class="rb-right">
+                        <span class="info-tag"><i class="fa-solid fa-circle-check"></i> सूची क्रमांक सरकारी प्रिंटेड रजिस्टर में मिलान हेतु उपयोगी है</span>
+                    </div>
+                </div>
+
+                <!-- Results Table Card -->
+                <div class="table-card">
+                    <div class="table-responsive">
+                        <table class="farmer-data-table" id="fc-table">
+                            <thead>
+                                <tr>
+                                    <th style="width: 100px; text-align: center;">सूची क्र.</th>
+                                    <th>किसान कोड (Farmer Code)</th>
+                                    <th>किसान का नाम</th>
+                                    <th>पिता / पति का नाम</th>
+                                    <th>सोसायटी / उपकेंद्र</th>
+                                    <th style="width: 120px;">कुल धान</th>
+                                    <th style="width: 200px; text-align: center;">कार्यवाही</th>
+                                </tr>
+                            </thead>
+                            <tbody id="fc-table-body">
+                                <tr>
+                                    <td colspan="7" class="table-empty-state">
+                                        <i class="fa-solid fa-spinner fa-spin"></i>
+                                        <h4>डेटा लोड हो रहा है...</h4>
+                                        <p>कृपया प्रतीक्षा करें</p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Pagination / Footer -->
+                    <div class="pagination-footer" id="fc-pagination">
+                        <div class="page-info" id="fc-page-info">दिख रहे 1 - 50</div>
+                        <div class="page-buttons">
+                            <button type="button" class="btn btn-sm btn-outline" id="fc-btn-prev"><i class="fa-solid fa-chevron-left"></i> पिछला</button>
+                            <button type="button" class="btn btn-sm btn-outline" id="fc-btn-next">अगला <i class="fa-solid fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. KISAN FORMS & AFFIDAVITS TAB (शपथ पत्र व शिकायत आवेदन) -->
+        <section id="tab-forms" class="tab-pane">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title-group">
+                        <i class="fa-solid fa-file-signature card-icon-font" style="color: #166534;"></i>
+                        <div>
+                            <h3>किसान कानूनी शपथ पत्र व शिकायत आवेदन निर्माता</h3>
+                            <p>समिति, तहसीलदार व कलेक्टर हेतु आवश्यक कानूनी शपथ पत्र व शिकायत आवेदन 1-क्लिक में तैयार व प्रिंट करें</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <!-- Sub-navigation buttons for Forms -->
+                    <div class="forms-subnav">
+                        <button type="button" class="btn-subnav active" id="btn-subnav-affidavit" onclick="switchFormsSubTab('affidavit')">
+                            <i class="fa-solid fa-stamp"></i> 1. किसान शपथ पत्र व स्व-घोषणा पत्र (Affidavit)
+                        </button>
+                        <button type="button" class="btn-subnav" id="btn-subnav-grievance" onclick="switchFormsSubTab('grievance')">
+                            <i class="fa-solid fa-bullhorn"></i> 2. वन-टैप शिकायत व आवेदन पत्र (Grievance)
+                        </button>
+                    </div>
+
+                    <!-- SUB-TAB A: AFFIDAVIT GENERATOR -->
+                    <div id="subtab-affidavit" class="subtab-content">
+                        <div class="filter-card">
+                            <h4 class="form-section-title"><i class="fa-solid fa-pen-nib"></i> शपथ पत्र का प्रकार व विवरण चुनें</h4>
+                            <div class="form-row-grid">
+                                <div class="form-group flex-2">
+                                    <label for="aff-type"><strong>शपथ पत्र का प्रकार (Select Affidavit Type):</strong></label>
+                                    <select id="aff-type" class="form-control" onchange="updateAffidavitFields()">
+                                        <option value="adhia">1. अधिया / रेगहा (बंटाईदार) कृषक सहमति व स्व-घोषणा पत्र</option>
+                                        <option value="family">2. पारिवारिक रकबा बंटवारा व सहमति घोषणा पत्र</option>
+                                        <option value="nominee">3. नॉमिनी (वारिसदार) बायोमेट्रिक तौल सहमति पत्र</option>
+                                        <option value="rakba">4. रकबा संशोधन व गिरदावरी त्रुटि सुधार शपथ पत्र</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="aff-farmer-name"><strong>किसान का नाम (Applicant Name) *</strong></label>
+                                    <input type="text" id="aff-farmer-name" class="form-control" placeholder="उदा. रामेश्वर साहू" value="रामेश्वर साहू">
+                                </div>
+                                <div class="form-group">
+                                    <label for="aff-father-name"><strong>पिता / पति का नाम *</strong></label>
+                                    <input type="text" id="aff-father-name" class="form-control" placeholder="उदा. स्व. चैतराम साहू" value="स्व. चैतराम साहू">
+                                </div>
+                            </div>
+
+                            <div class="form-row-grid">
+                                <div class="form-group">
+                                    <label for="aff-village"><strong>गांव / ग्राम पंचायत *</strong></label>
+                                    <input type="text" id="aff-village" class="form-control" placeholder="उदा. रसौटा" value="रसौटा">
+                                </div>
+                                <div class="form-group">
+                                    <label for="aff-block"><strong>विकासखंड / तहसील *</strong></label>
+                                    <input type="text" id="aff-block" class="form-control" placeholder="उदा. आरंग" value="आरंग">
+                                </div>
+                                <div class="form-group">
+                                    <label for="aff-district"><strong>जिला चुनें *</strong></label>
+                                    <select id="aff-district" class="form-control">
+                                        <!-- Pre-populated by JS with 28 districts -->
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="aff-center"><strong>उपार्जन केंद्र (समिति) *</strong></label>
+                                    <input type="text" id="aff-center" class="form-control" placeholder="उदा. रसौटा उपकेंद्र" value="रसौटा उपकेंद्र">
+                                </div>
+                            </div>
+
+                            <div class="form-row-grid">
+                                <div class="form-group">
+                                    <label for="aff-khasra"><strong>खसरा क्रमांक *</strong></label>
+                                    <input type="text" id="aff-khasra" class="form-control" placeholder="उदा. 142/1, 142/2" value="142/1">
+                                </div>
+                                <div class="form-group">
+                                    <label for="aff-area"><strong>कुल रकबा (एकड़ में) *</strong></label>
+                                    <input type="text" id="aff-area" class="form-control" placeholder="उदा. 4.50 एकड़" value="4.50 एकड़">
+                                </div>
+                                <div class="form-group" id="aff-second-party-group">
+                                    <label for="aff-second-party" id="aff-second-party-label"><strong>मूल भूमि स्वामी (जमीन मालिक) का नाम *</strong></label>
+                                    <input type="text" id="aff-second-party" class="form-control" placeholder="उदा. श्री फेरतू राम" value="श्री फेरतू राम">
+                                </div>
+                                <div class="form-group">
+                                    <label for="aff-mobile"><strong>मोबाइल नंबर</strong></label>
+                                    <input type="text" id="aff-mobile" class="form-control" placeholder="उदा. 98261XXXXX" value="9826144321">
+                                </div>
+                            </div>
+
+                            <div style="margin-top: 15px; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <button type="button" class="btn btn-primary" onclick="generateAffidavit()">
+                                    <i class="fa-solid fa-file-lines"></i> 📄 शपथ पत्र तैयार करें
+                                </button>
+                                <button type="button" class="btn btn-outline" onclick="printAffidavit()">
+                                    <i class="fa-solid fa-print"></i> 🖨️ A4 साइज में प्रिंट करें
+                                </button>
+                                <button type="button" class="btn btn-outline" onclick="copyAffidavitText()">
+                                    <i class="fa-solid fa-copy"></i> 📋 टेक्स्ट कॉपी करें
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Live Printable Affidavit Preview Box -->
+                        <div class="affidavit-preview-card" id="affidavit-print-area">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+
+                    <!-- SUB-TAB B: GRIEVANCE FORM GENERATOR -->
+                    <div id="subtab-grievance" class="subtab-content" style="display: none;">
+                        <div class="filter-card">
+                            <h4 class="form-section-title"><i class="fa-solid fa-triangle-exclamation" style="color: #dc2626;"></i> शिकायत का विवरण व संबंधित अधिकारी चुनें</h4>
+                            <div class="form-row-grid">
+                                <div class="form-group flex-2">
+                                    <label for="grv-issue"><strong>शिकायत की मुख्य समस्या चुनें (Select Problem):</strong></label>
+                                    <select id="grv-issue" class="form-control" onchange="updateGrievanceText()">
+                                        <option value="bardana">1. उपार्जन केंद्र में बारदाना (बोरी) न मिलने अथवा फटा/पुराना बारदाना देने बाबत</option>
+                                        <option value="weight">2. धान तौल में अवैध कटौती (घटतौली) अथवा हमाली में अवैध वसूली बाबत</option>
+                                        <option value="payment">3. धान विक्रय उपरांत 3 कार्यदिवस में बैंक खाते में भुगतान न आने बाबत</option>
+                                        <option value="refusal">4. टोकन होने के बावजूद उपार्जन केंद्र द्वारा धान तौल से मना करने बाबत</option>
+                                        <option value="misbehavior">5. समिति प्रबंधक अथवा कर्मचारियों द्वारा दुर्व्यवहार बाबत</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="grv-officer"><strong>शिकायत किसके समक्ष प्रस्तुत करनी है:</strong></label>
+                                    <select id="grv-officer" class="form-control">
+                                        <option value="श्रीमान कलेक्टर महोदय">श्रीमान कलेक्टर महोदय (District Collector)</option>
+                                        <option value="श्रीमान जिला खाद्य नियंत्रक महोदय">श्रीमान जिला खाद्य नियंत्रक महोदय (Food Controller)</option>
+                                        <option value="श्रीमान उप/सहायक पंजीयक, सहकारी संस्थाएं">श्रीमान उप/सहायक पंजीयक (ARCS)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row-grid">
+                                <div class="form-group">
+                                    <label for="grv-farmer-name"><strong>शिकायतकर्ता किसान का नाम *</strong></label>
+                                    <input type="text" id="grv-farmer-name" class="form-control" placeholder="उदा. रामेश्वर साहू" value="रामेश्वर साहू">
+                                </div>
+                                <div class="form-group">
+                                    <label for="grv-farmer-code"><strong>किसान कोड *</strong></label>
+                                    <input type="text" id="grv-farmer-code" class="form-control" placeholder="उदा. TF4400590100836" value="TF4400590100836">
+                                </div>
+                                <div class="form-group">
+                                    <label for="grv-center"><strong>उपार्जन केंद्र (समिति) *</strong></label>
+                                    <input type="text" id="grv-center" class="form-control" placeholder="उदा. रसौटा" value="रसौटा उपार्जन केंद्र">
+                                </div>
+                                <div class="form-group">
+                                    <label for="grv-district"><strong>जिला *</strong></label>
+                                    <select id="grv-district" class="form-control">
+                                        <!-- Pre-populated by JS with 28 districts -->
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="grv-details"><strong>समस्या का विस्तृत विवरण / घटना की तिथि:</strong></label>
+                                <textarea id="grv-details" class="form-control" rows="2" placeholder="संक्षिप्त विवरण दर्ज करें..."></textarea>
+                            </div>
+
+                            <div style="margin-top: 15px; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <button type="button" class="btn btn-danger" onclick="generateGrievance()">
+                                    <i class="fa-solid fa-file-circle-exclamation"></i> 📝 शिकायत पत्र तैयार करें
+                                </button>
+                                <button type="button" class="btn btn-outline" onclick="printGrievance()">
+                                    <i class="fa-solid fa-print"></i> 🖨️ शिकायत पत्र प्रिंट करें
+                                </button>
+                                <button type="button" class="btn btn-outline" onclick="copyGrievanceText()">
+                                    <i class="fa-solid fa-copy"></i> 📋 टेक्स्ट कॉपी करें
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- One-Tap Helpline Dial Badges -->
+                        <div class="helpline-strip-bar">
+                            <span class="hl-badge-title"><i class="fa-solid fa-headset"></i> तत्काल फोन पर शिकायत दर्ज कराएं:</span>
+                            <a href="tel:18002333663" class="btn-tel-pill"><i class="fa-solid fa-phone"></i> खाद्य विभाग टोल-फ्री: 1800-233-3663</a>
+                            <a href="tel:1967" class="btn-tel-pill"><i class="fa-solid fa-phone"></i> उपभोक्ता हेल्पलाइन: 1967</a>
+                            <a href="tel:1100" class="btn-tel-pill"><i class="fa-solid fa-phone"></i> सीएम समाधान: 1100</a>
+                        </div>
+
+                        <!-- Live Printable Grievance Letter Preview Box -->
+                        <div class="grievance-preview-card" id="grievance-print-area">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. SOLAR PUMP & DBT HELP TAB (सौर सुजला व DBT सहायता) -->
+        <section id="tab-schemes" class="tab-pane">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title-group">
+                        <i class="fa-solid fa-solar-panel card-icon-font" style="color: #d97706;"></i>
+                        <div>
+                            <h3>सौर सुजला योजना सब्सिडी चेकर एवं DBT बैंक सहायता</h3>
+                            <p>सोलर पंप पर 95% सरकारी सब्सिडी की गणना करें और धान का रुका भुगतान पाने हेतु बैंक आवेदन पत्र बनाएं</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <!-- Sub-navigation buttons for Schemes -->
+                    <div class="forms-subnav">
+                        <button type="button" class="btn-subnav active" id="btn-subnav-solar" onclick="switchSchemesSubTab('solar')">
+                            <i class="fa-solid fa-sun"></i> 1. सौर सुजला सोलर पंप सब्सिडी चेकर
+                        </button>
+                        <button type="button" class="btn-subnav" id="btn-subnav-dbt" onclick="switchSchemesSubTab('dbt')">
+                            <i class="fa-solid fa-building-columns"></i> 2. "पैसा क्यों अटका?" - आधार DBT / NPCI चेकर
+                        </button>
+                    </div>
+
+                    <!-- SUB-TAB A: SOLAR SUJALA CALCULATOR -->
+                    <div id="subtab-solar" class="subtab-content">
+                        <div class="filter-card">
+                            <h4 class="form-section-title"><i class="fa-solid fa-bolt" style="color: #f59e0b;"></i> सोलर पंप विवरण व कृषक श्रेणी चुनें</h4>
+                            <div class="form-row-grid">
+                                <div class="form-group flex-2">
+                                    <label for="solar-pump-type"><strong>सोलर पंप क्षमता व प्रकार (Pump Capacity):</strong></label>
+                                    <select id="solar-pump-type" class="form-control" onchange="calculateSolarSubsidy()">
+                                        <option value="2_surface">2 HP सरफेस सोलर पंप (उथला कुआं, नदी, नाला, तालाब)</option>
+                                        <option value="3_sub" selected>3 HP सबमर्सिबल सोलर पंप (बोरवेल गहराई 100-200 फीट)</option>
+                                        <option value="5_sub">5 HP सबमर्सिबल सोलर पंप (गहरा बोरवेल 200+ फीट, बड़ा रकबा)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="solar-category"><strong>कृषक श्रेणी / जाति (Category):</strong></label>
+                                    <select id="solar-category" class="form-control" onchange="calculateSolarSubsidy()">
+                                        <option value="ST">अनुसूचित जनजाति (ST) - विशेष छूट</option>
+                                        <option value="SC">अनुसूचित जाति (SC) - विशेष छूट</option>
+                                        <option value="OBC" selected>अन्य पिछड़ा वर्ग (OBC)</option>
+                                        <option value="GEN">सामान्य वर्ग (General)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="solar-area"><strong>कुल कृषि भूमि (एकड़ में):</strong></label>
+                                    <input type="number" id="solar-area" class="form-control" value="4.5" min="0.5" max="50" step="0.5" onchange="calculateSolarSubsidy()">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Subsidy Calculation Result Dashboard -->
+                        <div class="solar-results-grid">
+                            <div class="solar-res-box box-market">
+                                <span class="sr-label">पंप की कुल बाजार लागत</span>
+                                <h3 id="solar-market-cost">₹3,50,000</h3>
+                                <small>सोलर पैनल, इन्वर्टर, मोटर व इंस्टॉलेशन सहित</small>
+                            </div>
+                            <div class="solar-res-box box-subsidy">
+                                <span class="sr-label">छत्तीसगढ़ शासन (CREDA) सब्सिडी</span>
+                                <h3 id="solar-subsidy-amount">₹3,32,000 (95%)</h3>
+                                <small class="text-success"><i class="fa-solid fa-circle-check"></i> शासन द्वारा वहन</small>
+                            </div>
+                            <div class="solar-res-box box-farmer highlight-farmer">
+                                <span class="sr-label">किसान द्वारा देय अंशदान (Payable)</span>
+                                <h2 id="solar-farmer-share">₹18,000</h2>
+                                <small>किसान को मात्र इतनी राशि का बैंक ड्राफ्ट देना होगा</small>
+                            </div>
+                        </div>
+
+                        <!-- Solar Benefits & Eligibility Checklist -->
+                        <div class="solar-info-cards-grid">
+                            <div class="solar-card-item">
+                                <h5><i class="fa-solid fa-file-check" style="color:#166534;"></i> आवश्यक दस्तावेज</h5>
+                                <ul>
+                                    <li>कृषि भूमि का चालू खसरा एवं बी-1 (पटवारी प्रति)</li>
+                                    <li>आधार कार्ड व बैंक पासबुक की छायाप्रति</li>
+                                    <li>सक्षम अधिकारी द्वारा जारी जाति प्रमाण पत्र (ST/SC/OBC)</li>
+                                    <li>सिंचाई स्रोत (बोरवेल / कुआं / नाला) की उपलब्धता प्रमाणीकरण</li>
+                                </ul>
+                            </div>
+                            <div class="solar-card-item">
+                                <h5><i class="fa-solid fa-location-dot" style="color:#d97706;"></i> आवेदन कहां और कैसे करें?</h5>
+                                <ul>
+                                    <li>अपने जिले के <strong>क्रेडा (CREDA) कार्यालय</strong> में आवेदन फॉर्म जमा करें।</li>
+                                    <li>नजदीकी <strong>ग्रामीण कृषि विस्तार अधिकारी (RAEO)</strong> से संपर्क कर अग्रिम अनुशंसा कराएं।</li>
+                                    <li>स्वीकृति मिलने पर निर्धारित किसान अंश का ड्राफ्ट जिला क्रेडा कार्यालय के नाम जमा करें।</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SUB-TAB B: DBT & NPCI STATUS & BANK APPLICATION -->
+                    <div id="subtab-dbt" class="subtab-content" style="display: none;">
+                        <div class="dbt-diagnostic-banner">
+                            <div class="ddb-icon"><i class="fa-solid fa-circle-question"></i></div>
+                            <div>
+                                <h4>धान का भुगतान खाते में क्यों नहीं आया? (4 प्रमुख कारण व समाधान)</h4>
+                                <p>छत्तीसगढ़ शासन धान खरीदी का भुगतान सीधे बैंक खाते में (DBT / PFMS) द्वारा भेजता है। यदि आपका भुगतान अटका है, तो निम्न 4 बिंदुओं की जांच करें:</p>
+                            </div>
+                        </div>
+
+                        <div class="dbt-reasons-grid">
+                            <div class="dbt-reason-card">
+                                <span class="dbt-step-num">1</span>
+                                <h5>आधार NPCI मैपिंग न होना</h5>
+                                <p>बैंक खाता खुला होने पर भी यदि वह NPCI सर्वर पर आधार से सीडेड (Link) नहीं है, तो सरकारी पैसा वापस लौट जाता है।</p>
+                            </div>
+                            <div class="dbt-reason-card">
+                                <span class="dbt-step-num">2</span>
+                                <h5>खाता निष्क्रिय (Dormant) होना</h5>
+                                <p>लंबे समय से लेन-देन न होने पर खाता इनएक्टिव हो जाता है। ₹100 जमा या निकासी कर खाते को तत्काल चालू कराएं।</p>
+                            </div>
+                            <div class="dbt-reason-card">
+                                <span class="dbt-step-num">3</span>
+                                <h5>नाम की वर्तनी (Spelling) मिसमैच</h5>
+                                <p>किसान पंजीयन में दर्ज नाम और बैंक पासबुक में दर्ज नाम में अंतर होने पर पीएफएमएस (PFMS) भुगतान अस्वीकार कर देता है।</p>
+                            </div>
+                            <div class="dbt-reason-card">
+                                <span class="dbt-step-num">4</span>
+                                <h5>केवाईसी (KYC) अधूरा होना</h5>
+                                <p>बैंक शाखा में पैन कार्ड या आधार ई-केवाईसी अपडेट न होने पर ₹50,000 से अधिक का भुगतान होल्ड हो जाता है।</p>
+                            </div>
+                        </div>
+
+                        <!-- Direct Official Status Check Links -->
+                        <div class="dbt-links-bar">
+                            <span class="dbt-links-title"><i class="fa-solid fa-link"></i> ऑनलाइन स्थिति जांचें:</span>
+                            <a href="https://myaadhaar.uidai.gov.in/bank-seeding-status" target="_blank" rel="noopener noreferrer" class="btn-dbt-portal">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> UIDAI आधार बैंक सीडिंग स्टेटस देखें
+                            </a>
+                            <a href="https://pfms.nic.in/NewDefaultHome.aspx" target="_blank" rel="noopener noreferrer" class="btn-dbt-portal">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> PFMS सरकारी भुगतान ट्रैकर
+                            </a>
+                        </div>
+
+                        <!-- Ready Bank Application Form Generator -->
+                        <div class="filter-card" style="margin-top: 20px;">
+                            <h4 class="form-section-title"><i class="fa-solid fa-print"></i> बैंक शाखा प्रबंधक हेतु 'आधार NPCI / DBT सीडिंग आवेदन' तैयार करें</h4>
+                            <p style="font-size: 0.88rem; color: #475569; margin-bottom: 12px;">यह आवेदन पत्र प्रिंट कर अपनी बैंक शाखा में पासबुक व आधार की कॉपी के साथ जमा करें। आपका खाता 24 घंटे में DBT लिंक हो जाएगा।</p>
+                            
+                            <div class="form-row-grid">
+                                <div class="form-group">
+                                    <label for="dbt-farmer-name"><strong>किसान का नाम *</strong></label>
+                                    <input type="text" id="dbt-farmer-name" class="form-control" value="रामेश्वर साहू">
+                                </div>
+                                <div class="form-group">
+                                    <label for="dbt-father-name"><strong>पिता / पति का नाम *</strong></label>
+                                    <input type="text" id="dbt-father-name" class="form-control" value="स्व. चैतराम साहू">
+                                </div>
+                                <div class="form-group">
+                                    <label for="dbt-bank-name"><strong>बैंक का नाम *</strong></label>
+                                    <input type="text" id="dbt-bank-name" class="form-control" placeholder="उदा. छत्तीसगढ़ राज्य ग्रामीण बैंक" value="छत्तीसगढ़ राज्य ग्रामीण बैंक">
+                                </div>
+                                <div class="form-group">
+                                    <label for="dbt-branch-name"><strong>शाखा (Branch) *</strong></label>
+                                    <input type="text" id="dbt-branch-name" class="form-control" placeholder="उदा. आरंग" value="आरंग शाखा">
+                                </div>
+                            </div>
+
+                            <div class="form-row-grid">
+                                <div class="form-group">
+                                    <label for="dbt-account-no"><strong>खाता संख्या (Account No) *</strong></label>
+                                    <input type="text" id="dbt-account-no" class="form-control" placeholder="उदा. 408200100012345" value="408200100012345">
+                                </div>
+                                <div class="form-group">
+                                    <label for="dbt-aadhaar-no"><strong>आधार नंबर (अंतिम 4 अंक) *</strong></label>
+                                    <input type="text" id="dbt-aadhaar-no" class="form-control" placeholder="उदा. XXXX-XXXX-4910" value="XXXX-XXXX-4910">
+                                </div>
+                                <div class="form-group">
+                                    <label for="dbt-mobile"><strong>मोबाइल नंबर *</strong></label>
+                                    <input type="text" id="dbt-mobile" class="form-control" value="9826144321">
+                                </div>
+                            </div>
+
+                            <div style="margin-top: 15px; display: flex; gap: 10px; flex-wrap: wrap;">
+                                <button type="button" class="btn btn-primary" onclick="generateDbtBankLetter()">
+                                    <i class="fa-solid fa-file-invoice"></i> 📄 बैंक आवेदन पत्र बनाएं
+                                </button>
+                                <button type="button" class="btn btn-outline" onclick="printDbtBankLetter()">
+                                    <i class="fa-solid fa-print"></i> 🖨️ बैंक आवेदन प्रिंट करें
+                                </button>
+                                <button type="button" class="btn btn-outline" onclick="copyDbtBankLetterText()">
+                                    <i class="fa-solid fa-copy"></i> 📋 टेक्स्ट कॉपी करें
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Live Printable DBT Letter Area -->
+                        <div class="dbt-preview-card" id="dbt-print-area">
+                            <!-- Populated dynamically -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. TOKEN STATUS & SLIP PRINT TAB -->
+        <section id="tab-status" class="tab-pane">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title-group">
+                        <img src="assets/ic_token.png" class="card-icon-img" alt="Icon">
+                        <div>
+                            <h3>टोकन स्थिति एवं रसीद पावती (Token Status & Slip)</h3>
+                            <p>टोकन नंबर या किसान कोड से अपना टोकन खोजें और पावती पर्ची प्रिंट करें</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <div class="search-box-wrapper">
+                        <div class="search-type-radios">
+                            <label><input type="radio" name="search-by" value="token" checked> टोकन नंबर द्वारा</label>
+                            <label><input type="radio" name="search-by" value="farmer"> किसान कोड द्वारा</label>
+                        </div>
+                        <div class="input-with-button">
+                            <i class="fa-solid fa-receipt input-prefix-icon"></i>
+                            <input type="text" id="status-query-input" class="form-control" placeholder="उदा. TK-2026-440059-0082" value="TK-2026-440059-0082">
+                            <button type="button" class="btn btn-primary" id="btn-check-status">
+                                <i class="fa-solid fa-search"></i> खोजें (Search)
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Printable Token Slip Receipt -->
+                    <div id="receipt-area" class="receipt-container">
+                        <div class="slip-card" id="printable-slip">
+                            <!-- Slip Header -->
+                            <div class="slip-header">
+                                <img src="assets/cg_logo_n.png" class="slip-logo" alt="CG Govt">
+                                <div class="slip-title-area">
+                                    <h4>छत्तीसगढ़ शासन - खाद्य, नागरिक आपूर्ति एवं उपभोक्ता संरक्षण विभाग</h4>
+                                    <h5>समर्थन मूल्य पर धान उपार्जन - टोकन पावती पर्ची</h5>
+                                    <p class="slip-sub">खरीफ विपणन वर्ष 2026-27 | तुंहर टोकन ऑनलाइन प्रणाली</p>
+                                </div>
+                                <img src="assets/ic_nic_logo.png" class="slip-logo nic" alt="NIC">
+                            </div>
+
+                            <div class="slip-meta-strip">
+                                <div class="slip-token-number">
+                                    टोकन क्र.: <span id="slip-token-id">TK-2026-440059-0082</span>
+                                </div>
+                                <div class="slip-date-time">
+                                    जारी दिनांक: <span id="slip-issue-time">12-11-2026 18:45</span>
+                                </div>
+                                <div class="slip-status-tag">
+                                    <span class="status-active" id="slip-status-badge">सक्रिय (CONFIRMED)</span>
+                                </div>
+                            </div>
+
+                            <!-- Slip Details Table -->
+                            <table class="slip-table">
+                                <tr>
+                                    <td class="col-lbl">किसान कोड (Farmer Code):</td>
+                                    <td class="col-val" id="slip-fcode">TF4400590100836</td>
+                                    <td class="col-lbl">किसान का नाम:</td>
+                                    <td class="col-val" id="slip-fname">रामेश्वर साहू</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-lbl">पिता/पति का नाम:</td>
+                                    <td class="col-val" id="slip-ffather">स्व. चैतराम साहू</td>
+                                    <td class="col-lbl">मोबाइल नंबर:</td>
+                                    <td class="col-val" id="slip-fmobile">98XXXX4321</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-lbl">जिला:</td>
+                                    <td class="col-val" id="slip-fdistrict">रायपुर (Raipur)</td>
+                                    <td class="col-lbl">विकासखंड:</td>
+                                    <td class="col-val" id="slip-fblock">आरंग (Arang)</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-lbl">उपार्जन केंद्र (समिति):</td>
+                                    <td class="col-val text-primary" colspan="3" id="slip-fsamiti">
+                                        रसौटा (समिति कोड: 440059)
+                                    </td>
+                                </tr>
+                                <tr class="highlight-row">
+                                    <td class="col-lbl">धान लाने की नियत तिथि:</td>
+                                    <td class="col-val text-danger" id="slip-fdate">
+                                        <strong>16-11-2026 (सोमवार)</strong>
+                                    </td>
+                                    <td class="col-lbl">अनुमत धान मात्रा:</td>
+                                    <td class="col-val text-success" id="slip-fqty">
+                                        <strong>40.00 क्विंटल (100 बोरे)</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-lbl">धान का प्रकार:</td>
+                                    <td class="col-val">धान (मोटा/कॉमन)</td>
+                                    <td class="col-lbl">वाहन का प्रकार:</td>
+                                    <td class="col-val" id="slip-fvehicle">ट्रैक्टर</td>
+                                </tr>
+                                <tr>
+                                    <td class="col-lbl">कुल स्वीकृत रकबा:</td>
+                                    <td class="col-val">2.5000 हेक्टेयर</td>
+                                    <td class="col-lbl">बैंक खाता शाखा:</td>
+                                    <td class="col-val">C.G. Rajya Gramin Bank</td>
+                                </tr>
+                            </table>
+
+                            <!-- Slip Footer & QR placeholder -->
+                            <div class="slip-footer">
+                                <div class="qr-box">
+                                    <div class="mock-qr">
+                                        <i class="fa-solid fa-qrcode fa-3x"></i>
+                                    </div>
+                                    <span class="qr-caption">सत्यापन हेतु क्यूआर कोड</span>
+                                </div>
+                                <div class="slip-instructions">
+                                    <h6>महत्वपूर्ण निर्देश:</h6>
+                                    <ul>
+                                        <li>टोकन में अंकित तिथि को ही धान उपार्जन केंद्र में लाया जावे।</li>
+                                        <li>धान साफ-सुथरा व 17% से कम नमी वाला होना चाहिए।</li>
+                                        <li>तौल के समय किसान पंजीयन पर्ची व आधार कार्ड साथ रखें।</li>
+                                        <li>किसी भी समस्या के लिए समिति प्रबंधक से संपर्क करें।</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slip Action Buttons -->
+                        <div class="receipt-actions">
+                            <button class="btn btn-primary" onclick="printReceipt()">
+                                <i class="fa-solid fa-print"></i> पर्ची प्रिंट करें (Print Slip)
+                            </button>
+                            <button class="btn btn-outline" onclick="downloadSlipPDF()">
+                                <i class="fa-solid fa-file-arrow-down"></i> रसीद डाउनलोड करें
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. CALCULATOR TAB -->
+        <section id="tab-calculator" class="tab-pane">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title-group">
+                        <img src="assets/ic_paddy_n.png" class="card-icon-img" alt="Icon">
+                        <div>
+                            <h3>धान विक्रय व टोकन कोटा कैलकुलेटर</h3>
+                            <p>छत्तीसगढ़ शासन की 21 क्विंटल प्रति एकड़ नीति अनुसार अपने कुल धान व मूल्य की गणना करें</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <div class="calc-grid">
+                        <div class="calc-form">
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <strong>रकबा इकाई चुनें (Select Land Unit):</strong>
+                                </label>
+                                <div class="unit-selector">
+                                    <label><input type="radio" name="calc-unit" value="acre" checked onchange="calculatePaddy()"> एकड़ (Acre)</label>
+                                    <label><input type="radio" name="calc-unit" value="hectare" onchange="calculatePaddy()"> हेक्टेयर (Hectare)</label>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="calc-area-input">
+                                    <strong>धान का पंजीकृत रकबा (Enter Area) *</strong>
+                                </label>
+                                <input type="number" id="calc-area-input" class="form-control form-control-lg" placeholder="उदा. 5" value="5" step="0.01" min="0" oninput="calculatePaddy()">
+                                <small class="form-hint" id="calc-converted-unit">5.00 एकड़ = 2.0234 हेक्टेयर</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label" for="calc-msp-rate">
+                                    <strong>समर्थन मूल्य (Rate per Quintal):</strong>
+                                </label>
+                                <input type="text" id="calc-msp-rate" class="form-control" value="₹ 3,100 प्रति क्विंटल" readonly>
+                            </div>
+                        </div>
+
+                        <!-- Calculation Results Dashboard -->
+                        <div class="calc-results-card">
+                            <h4><i class="fa-solid fa-chart-pie"></i> संभावित गणना परिणाम</h4>
+                            <div class="result-stat-item">
+                                <span class="stat-label">अधिकतम विक्रय योग्य धान:</span>
+                                <span class="stat-value text-primary" id="res-total-quintal">105.00 क्विंटल</span>
+                            </div>
+                            <div class="result-stat-item">
+                                <span class="stat-label">अनुमानित बोरों की संख्या (40 kg):</span>
+                                <span class="stat-value" id="res-total-bags">262 बोरे (लगभग)</span>
+                            </div>
+                            <div class="result-stat-item">
+                                <span class="stat-label">सुझावित टोकन संख्या:</span>
+                                <span class="stat-value" id="res-recommended-tokens">2 से 3 टोकन (सुविधा अनुसार)</span>
+                            </div>
+                            <div class="result-stat-item total-money-item">
+                                <span class="stat-label">कुल संभावित भुगतान राशि:</span>
+                                <span class="stat-value text-success" id="res-total-amount">₹ 3,25,500</span>
+                            </div>
+                            <p class="calc-note">
+                                * गणना 21 क्विंटल प्रति एकड़ की दर से ₹3100 प्रति क्विंटल मानकर की गई है।
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. INSTRUCTIONS TAB -->
+        <section id="tab-instructions" class="tab-pane">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title-group">
+                        <img src="assets/ic_instruction.png" class="card-icon-img" alt="Icon">
+                        <div>
+                            <h3>टोकन प्रणाली के नियम एवं मार्गदर्शिका</h3>
+                            <p>तुंहर टोकन के माध्यम से सुगम धान उपार्जन हेतु आवश्यक दिशा-निर्देश</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <div class="guidelines-list">
+                        <div class="guide-item">
+                            <span class="guide-num">1</span>
+                            <div>
+                                <h5>टोकन जारी करने का समय व दिन</h5>
+                                <p>टोकन केवल कार्यदिवसों (सोमवार से शुक्रवार) हेतु जारी किए जाएंगे। शनिवार व रविवार को धान उपार्जन अवकाश रहता है। टोकन बुकिंग प्रतिदिन प्रातः 9:30 बजे से प्रारंभ होती है।</p>
+                            </div>
+                        </div>
+
+                        <div class="guide-item">
+                            <span class="guide-num">2</span>
+                            <div>
+                                <h5>दैनिक उपार्जन सीमा (समिति क्षमता)</h5>
+                                <p>प्रत्येक उपार्जन केंद्र की दैनिक भंडारण व परिवहन क्षमता सीमित होती है। यदि किसी दिनांक को कोटा पूर्ण हो चुका है, तो किसान आगामी किसी अन्य उपलब्ध दिनांक का चयन कर सकते हैं।</p>
+                            </div>
+                        </div>
+
+                        <div class="guide-item">
+                            <span class="guide-num">3</span>
+                            <div>
+                                <h5>धान की गुणवत्ता मानक (FAQ Standards)</h5>
+                                <p>उपार्जन केंद्र पर लाया जाने वाला धान मानक गुणवत्ता (FAQ) का होना चाहिए, जिसमें नमी अधिकतम 17% से अधिक नहीं होनी चाहिए। बदरंग व कचरा रहित साफ धान ही स्वीकार्य होगा।</p>
+                            </div>
+                        </div>
+
+                        <div class="guide-item">
+                            <span class="guide-num">4</span>
+                            <div>
+                                <h5>बायोमेट्रिक प्रमाणीकरण (आधार/माइक्रोएटीएम)</h5>
+                                <p>उपार्जन केंद्र पर धान तौल के समय किसान या उनके द्वारा नामांकित नॉमिनी (वारिस) का बायोमेट्रिक / आधार सत्यापन आवश्यक है।</p>
+                            </div>
+                        </div>
+
+                        <div class="guide-item">
+                            <span class="guide-num">5</span>
+                            <div>
+                                <h5>टोकन निरस्त व दोबारा काटना</h5>
+                                <p>यदि किसान निर्धारित दिनांक को धान लाने में असमर्थ हैं, तो वे उस तिथि से कम से कम 24 घंटे पूर्व टोकन निरस्त कर सकते हैं, ताकि समिति का स्लॉट व्यर्थ न जाए।</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact details -->
+                    <div class="helpline-card">
+                        <div class="hl-content">
+                            <h4><i class="fa-solid fa-headset"></i> सहायता एवं शिकायत निवारण</h4>
+                            <p>यदि टोकन काटने या किसान कोड खोजने में कोई कठिनाई हो रही है, तो अपने निकटतम समिति प्रबंधक, ग्रामीण कृषि विस्तार अधिकारी (RAEO) अथवा राज्य स्तरीय टोल-फ्री हेल्पलाइन पर संपर्क करें।</p>
+                            <div class="contact-badges">
+                                <span class="badge"><i class="fa-solid fa-phone"></i> टोल-फ्री: 1800-233-3663</span>
+                                <span class="badge"><i class="fa-solid fa-phone"></i> उपभोक्ता हेल्पलाइन: 1967</span>
+                                <span class="badge"><i class="fa-solid fa-globe"></i> वेब पोर्टल: khadya.cg.nic.in</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="portal-footer">
+        <div class="container footer-container">
+            <div class="footer-left">
+                <img src="assets/cg_logo_n.png" class="footer-logo" alt="CG Govt">
+                <div>
+                    <h5>खाद्य, नागरिक आपूर्ति एवं उपभोक्ता संरक्षण विभाग, छत्तीसगढ़ शासन</h5>
+                    <p>यह पोर्टल किसानों की सुविधा हेतु ऑनलाइन धान उपार्जन टोकन प्रबंधन प्रणाली प्रदान करता है।</p>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="footer-nic">
+                    <img src="assets/ic_nic_logo.png" class="nic-footer-logo" alt="NIC">
+                    <div>
+                        <span>अभिकल्पित एवं विकसित:</span>
+                        <strong>राष्ट्रीय सूचना विज्ञान केंद्र (NIC), छत्तीसगढ़</strong>
+                    </div>
+                </div>
+                <div class="copyright">
+                    &copy; 2026 खाद्य विभाग, छत्तीसगढ़ शासन। सर्वाधिकार सुरक्षित।
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Digital Kisan ID Card Modal -->
+    <div id="kisan-card-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-dialog kisan-card-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title-wrap">
+                        <i class="fa-solid fa-id-card modal-title-icon" style="color: #166534;"></i>
+                        <h4>डिजिटल कृषक परिचय पत्र (Digital Kisan ID Card)</h4>
+                    </div>
+                    <button type="button" class="btn-modal-close" onclick="closeKisanCardModal()">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <!-- Printable Kisan PVC Smart Card -->
+                    <div class="kisan-id-card-wrapper" id="printable-kisan-card">
+                        <div class="kic-top-stripe">
+                            <img src="assets/cg_logo_n.png" class="kic-logo" alt="CG Govt">
+                            <div class="kic-header-text">
+                                <h3>छत्तीसगढ़ शासन</h3>
+                                <h5>खाद्य, नागरिक आपूर्ति एवं उपभोक्ता संरक्षण विभाग</h5>
+                                <span class="kic-season">खरीफ विपणन वर्ष 2026-27 • समर्थन मूल्य धान उपार्जन</span>
+                            </div>
+                            <img src="assets/ic_nic_logo.png" class="kic-nic-logo" alt="NIC">
+                        </div>
+                        
+                        <div class="kic-card-body">
+                            <div class="kic-avatar-col">
+                                <div class="kic-avatar-box">
+                                    <i class="fa-solid fa-user-tie"></i>
+                                </div>
+                                <span class="kic-verified-badge"><i class="fa-solid fa-circle-check"></i> प्रमाणित कृषक</span>
+                                <div class="kic-qr-wrap">
+                                    <img id="kic-qr-img" src="" alt="Farmer QR Code">
+                                </div>
+                            </div>
+
+                            <div class="kic-details-col">
+                                <div class="kic-field-hero">
+                                    <span class="kic-label">किसान का नाम (Farmer Name)</span>
+                                    <h2 class="kic-farmer-name" id="kic-name">--</h2>
+                                </div>
+                                <div class="kic-grid-2">
+                                    <div class="kic-field">
+                                        <span class="kic-label">पिता / पति का नाम:</span>
+                                        <strong id="kic-father">--</strong>
+                                    </div>
+                                    <div class="kic-field">
+                                        <span class="kic-label">किसान पंजीयन कोड (Code):</span>
+                                        <strong class="kic-code-text" id="kic-code">--</strong>
+                                    </div>
+                                    <div class="kic-field">
+                                        <span class="kic-label">जिला (District):</span>
+                                        <strong id="kic-district">--</strong>
+                                    </div>
+                                    <div class="kic-field">
+                                        <span class="kic-label">उपार्जन केंद्र (समिति):</span>
+                                        <strong class="text-primary" id="kic-center">--</strong>
+                                    </div>
+                                    <div class="kic-field">
+                                        <span class="kic-label">कुल धान कोटा (Paddy):</span>
+                                        <strong class="text-success" id="kic-paddy">--</strong>
+                                    </div>
+                                    <div class="kic-field">
+                                        <span class="kic-label">सूची क्रमांक:</span>
+                                        <strong id="kic-kramank">--</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="kic-footer">
+                            <span><i class="fa-solid fa-shield-halved"></i> यह डिजिटल पहचान पत्र छत्तीसगढ़ समर्थन मूल्य धान उपार्जन व्यवस्था अंतर्गत मान्य है।</span>
+                            <span class="kic-helpline">टोल-फ्री: 1800-233-3663</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline" onclick="closeKisanCardModal()">
+                        <i class="fa-solid fa-xmark"></i> बंद करें
+                    </button>
+                    <button type="button" class="btn btn-primary" onclick="printKisanCard()">
+                        <i class="fa-solid fa-print"></i> 🖨️ कार्ड प्रिंट करें / PDF
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast Modal -->
+    <div id="toast" class="toast-notification"></div>
+
+    <script src="bastar_data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
