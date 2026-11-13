@@ -1,0 +1,15 @@
+# Large Database & Sensitive Data (Over GitHub 100MB limit)
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+cg_kisan_data.json
+bastar_data.js
+bastar_farmers.json
+data/
+node_modules/
+.env
+.DS_Store
+Thumbs.db
