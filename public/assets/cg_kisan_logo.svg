@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <!-- Background Radial Gradient -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="70%" stop-color="#f0fdf4"/>
+      <stop offset="100%" stop-color="#dcfce7"/>
+    </radialGradient>
+    
+    <!-- Outer Ring Gradient -->
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#15803d"/>
+      <stop offset="50%" stop-color="#16a34a"/>
+      <stop offset="100%" stop-color="#15803d"/>
+    </linearGradient>
+
+    <!-- Gold Accent Gradient -->
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="50%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+
+    <!-- Sun Glow Gradient -->
+    <radialGradient id="sunGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="60%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </radialGradient>
+
+    <!-- CG Map Silhouette Gradient -->
+    <linearGradient id="mapGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#16a34a"/>
+      <stop offset="50%" stop-color="#15803d"/>
+      <stop offset="100%" stop-color="#166534"/>
+    </linearGradient>
+
+    <!-- Drop Shadows -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Decorative Ring -->
+  <circle cx="100" cy="100" r="96" fill="url(#bgGrad)" stroke="url(#ringGrad)" stroke-width="5" filter="url(#shadow)"/>
+  <circle cx="100" cy="100" r="90" fill="none" stroke="url(#goldGrad)" stroke-width="2" stroke-dasharray="3 3"/>
+
+  <!-- Rising Sun Behind Map -->
+  <g transform="translate(100, 100)">
+    <circle cx="0" cy="-10" r="32" fill="url(#sunGrad)" opacity="0.85"/>
+    <!-- Sun Rays -->
+    <path d="M0 -48 L0 -42 M27 -37 L23 -32 M38 -10 L32 -10 M27 17 L23 12 M-27 -37 L-23 -32 M-38 -10 L-32 -10 M-27 17 L-23 12" 
+          stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Chhattisgarh Seahorse Silhouette Map -->
+  <!-- Authentic simplified contour of CG (North Balrampur to South Sukma) -->
+  <path d="M 96,44 
+           C 102,43 111,46 116,50 
+           C 120,53 122,58 119,63 
+           C 116,68 123,73 125,79 
+           C 127,85 125,91 120,95 
+           C 122,101 123,107 119,114 
+           C 115,121 113,128 111,134 
+           C 109,141 106,148 102,154 
+           C 98,160 95,163 93,162 
+           C 91,160 88,153 87,146 
+           C 85,138 88,131 87,123 
+           C 86,116 80,109 81,102 
+           C 82,95 86,90 85,84 
+           C 83,78 78,72 82,65 
+           C 85,58 87,51 92,46 Z" 
+        fill="url(#mapGrad)" 
+        stroke="#ffffff" 
+        stroke-width="1.8" 
+        filter="url(#shadow)"/>
+
+  <!-- Left Golden Paddy Ear (धान की बाली) -->
+  <g transform="translate(48, 100)" stroke="url(#goldGrad)" fill="url(#goldGrad)">
+    <!-- Stem -->
+    <path d="M 12,50 C 4,25 0,-5 12,-30" fill="none" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Grains -->
+    <ellipse cx="6" cy="-26" rx="5" ry="2.5" transform="rotate(-30 6 -26)"/>
+    <ellipse cx="14" cy="-20" rx="5" ry="2.5" transform="rotate(25 14 -20)"/>
+    <ellipse cx="3" cy="-14" rx="5.5" ry="2.5" transform="rotate(-35 3 -14)"/>
+    <ellipse cx="12" cy="-7" rx="5.5" ry="2.5" transform="rotate(30 12 -7)"/>
+    <ellipse cx="2" cy="0" rx="6" ry="2.5" transform="rotate(-35 2 0)"/>
+    <ellipse cx="11" cy="7" rx="6" ry="2.5" transform="rotate(30 11 7)"/>
+    <ellipse cx="3" cy="15" rx="6" ry="2.5" transform="rotate(-30 3 15)"/>
+    <ellipse cx="12" cy="22" rx="6" ry="2.5" transform="rotate(25 12 22)"/>
+    <ellipse cx="6" cy="30" rx="5.5" ry="2.5" transform="rotate(-25 6 30)"/>
+    <ellipse cx="13" cy="37" rx="5" ry="2.5" transform="rotate(20 13 37)"/>
+  </g>
+
+  <!-- Right Golden Paddy Ear (धान की बाली) -->
+  <g transform="translate(152, 100) scale(-1, 1)" stroke="url(#goldGrad)" fill="url(#goldGrad)">
+    <!-- Stem -->
+    <path d="M 12,50 C 4,25 0,-5 12,-30" fill="none" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Grains -->
+    <ellipse cx="6" cy="-26" rx="5" ry="2.5" transform="rotate(-30 6 -26)"/>
+    <ellipse cx="14" cy="-20" rx="5" ry="2.5" transform="rotate(25 14 -20)"/>
+    <ellipse cx="3" cy="-14" rx="5.5" ry="2.5" transform="rotate(-35 3 -14)"/>
+    <ellipse cx="12" cy="-7" rx="5.5" ry="2.5" transform="rotate(30 12 -7)"/>
+    <ellipse cx="2" cy="0" rx="6" ry="2.5" transform="rotate(-35 2 0)"/>
+    <ellipse cx="11" cy="7" rx="6" ry="2.5" transform="rotate(30 11 7)"/>
+    <ellipse cx="3" cy="15" rx="6" ry="2.5" transform="rotate(-30 3 15)"/>
+    <ellipse cx="12" cy="22" rx="6" ry="2.5" transform="rotate(25 12 22)"/>
+    <ellipse cx="6" cy="30" rx="5.5" ry="2.5" transform="rotate(-25 6 30)"/>
+    <ellipse cx="13" cy="37" rx="5" ry="2.5" transform="rotate(20 13 37)"/>
+  </g>
+
+  <!-- Lower Banner Ribbon -->
+  <path d="M 35,148 L 50,140 L 150,140 L 165,148 L 158,166 L 42,166 Z" 
+        fill="#14532d" stroke="url(#goldGrad)" stroke-width="1.5" filter="url(#shadow)"/>
+
+  <!-- Banner Text: डिजिटल किसान सेवा -->
+  <text x="100" y="156" 
+        font-family="'Noto Sans Devanagari', 'Mukta', 'Segoe UI', sans-serif" 
+        font-size="11" 
+        font-weight="800" 
+        fill="#ffffff" 
+        text-anchor="middle" 
+        letter-spacing="0.5">
+    डिजिटल किसान सेवा
+  </text>
+  <text x="100" y="164" 
+        font-family="'Noto Sans Devanagari', 'Mukta', 'Segoe UI', sans-serif" 
+        font-size="6.5" 
+        font-weight="700" 
+        fill="#fde047" 
+        text-anchor="middle" 
+        letter-spacing="0.8">
+    छत्तीसगढ़
+  </text>
+
+  <!-- Central Star Accent -->
+  <polygon points="100,24 102,29 107,29 103,32 105,37 100,34 95,37 97,32 93,29 98,29" 
+           fill="url(#goldGrad)"/>
+</svg>
